@@ -39,3 +39,4 @@ coverage/
 # Misc
 .cache/
 .temp/
+frontend/node_modules/
