@@ -15,16 +15,22 @@ const MyTodos = () => {
     const [editingTodo, setEditingTodo] = useState(null);
 
     useEffect(() => {
-        loadTodos();
-    }, []);
+        if (user) {
+            loadTodos();
+        }
+    }, [user]);
 
     useEffect(() => {
         filterTodos();
     }, [todos, statusFilter]);
 
     const loadTodos = async () => {
+        if (!user?._id) {
+            console.warn('User not loaded yet');
+            return;
+        }
         try {
-            const data = await todoService.getMyTodos();
+            const data = await todoService.getMyTodos(user._id);
             setTodos(data);
         } catch (error) {
             console.error('Error loading todos:', error);

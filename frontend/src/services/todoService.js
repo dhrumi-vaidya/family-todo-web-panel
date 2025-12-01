@@ -12,6 +12,11 @@ export const todoService = {
         return response.data;
     },
 
+    getMyTodos: async (userId) => {
+        const response = await api.get(`/todos?assignedTo=${userId}`);
+        return response.data;
+    },
+
     getFamilyTodos: async () => {
         const response = await api.get('/todos/family');
         return response.data;
