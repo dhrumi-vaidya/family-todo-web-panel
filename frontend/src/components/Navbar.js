@@ -1,10 +1,12 @@
 import React from 'react';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 
 const NavigationBar = () => {
     const { user, logout, isAuthenticated } = useAuth();
+    const { isDarkMode, toggleTheme } = useTheme();
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -17,7 +19,7 @@ const NavigationBar = () => {
     }
 
     return (
-        <Navbar bg="primary" variant="dark" expand="lg">
+        <Navbar bg={isDarkMode ? "dark" : "primary"} variant="dark" expand="lg">
             <Container>
                 <Navbar.Brand as={Link} to="/dashboard">
                     📝 Family Todo
@@ -41,6 +43,15 @@ const NavigationBar = () => {
                         <Nav.Link as={Link} to="/family-tree">🌳 Family Tree</Nav.Link>
                     </Nav>
                     <Nav>
+                        <Button
+                            variant="outline-light"
+                            size="sm"
+                            onClick={toggleTheme}
+                            className="me-3 theme-toggle-btn"
+                            title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+                        >
+                            {isDarkMode ? '☀️' : '🌙'}
+                        </Button>
                         <NavDropdown title={user?.name || 'User'} id="user-dropdown" align="end">
                             <NavDropdown.Item as={Link} to="/profile">
                                 👤 My Profile

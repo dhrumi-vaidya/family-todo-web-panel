@@ -423,3 +423,710 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #0b5ed7;
 }
+
+/* Dashboard Specific Styles */
+.dashboard-container {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.dashboard-container .card {
+  transition: all 0.3s ease;
+}
+
+.dashboard-container .card:hover {
+  transform: translateY(-4px);
+}
+
+/* Dashboard Calendar */
+.dashboard-calendar {
+  font-size: 0.85rem;
+}
+
+.dashboard-calendar .react-calendar__navigation {
+  margin-bottom: 1rem;
+}
+
+.dashboard-calendar .react-calendar__navigation button {
+  min-width: 36px;
+  background: none;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.dashboard-calendar .react-calendar__navigation button:enabled:hover,
+.dashboard-calendar .react-calendar__navigation button:enabled:focus {
+  background-color: #e9ecef;
+}
+
+.dashboard-calendar .react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.dashboard-calendar .react-calendar__tile {
+  max-width: 100%;
+  padding: 0.75em 0.5em;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 6px;
+}
+
+.dashboard-calendar .react-calendar__tile:enabled:hover,
+.dashboard-calendar .react-calendar__tile:enabled:focus {
+  background-color: #f8f9fa;
+}
+
+.dashboard-calendar .react-calendar__tile--now {
+  background: #e7f5ff;
+  font-weight: bold;
+}
+
+.dashboard-calendar .react-calendar__tile--now:enabled:hover,
+.dashboard-calendar .react-calendar__tile--now:enabled:focus {
+  background: #d0ebff;
+}
+
+.dashboard-calendar .react-calendar__tile--active {
+  background: #667eea !important;
+  color: white;
+}
+
+.dashboard-calendar .react-calendar__tile--active:enabled:hover,
+.dashboard-calendar .react-calendar__tile--active:enabled:focus {
+  background: #5a67d8 !important;
+}
+
+.dashboard-calendar .has-event {
+  position: relative;
+}
+
+.dashboard-calendar .has-event::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #f59f00;
+}
+
+/* Gradient Cards */
+.gradient-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.gradient-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Dashboard */
+@media (max-width: 991px) {
+  .dashboard-container .card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-calendar {
+    font-size: 0.75rem;
+  }
+
+  .dashboard-calendar .react-calendar__tile {
+    padding: 0.5em 0.25em;
+  }
+}
+
+/* Chart Container */
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+/* Team Member Avatars */
+.team-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.team-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bar Enhancements */
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* Icon Animations */
+.bi {
+  transition: all 0.2s ease;
+}
+
+.card-body h5 .bi:hover {
+  transform: scale(1.2);
+}
+
+/* Smooth Transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ========================================
+   DARK MODE STYLES
+   ======================================== */
+
+/* Dark Mode Base */
+body.dark-mode {
+  background-color: #1a1d29;
+  color: #e4e6eb;
+}
+
+body.dark-mode .App {
+  background-color: #1a1d29;
+  min-height: 100vh;
+}
+
+/* Dark Mode - Typography */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #e4e6eb;
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode div {
+  color: #e4e6eb;
+}
+
+body.dark-mode .text-muted {
+  color: #b0b3b8 !important;
+}
+
+/* Dark Mode - Cards */
+body.dark-mode .card {
+  background-color: #242731;
+  border-color: #3a3f4b;
+  color: #e4e6eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .card-header {
+  background-color: #2f3441;
+  border-bottom-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .card-body {
+  color: #e4e6eb;
+}
+
+body.dark-mode .card-footer {
+  background-color: #2f3441;
+  border-top-color: #3a3f4b;
+}
+
+/* Dark Mode - Stat Cards */
+body.dark-mode .stat-card {
+  background-color: #242731;
+}
+
+body.dark-mode .stat-card::before {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.dark-mode .stat-card h3 {
+  color: #667eea;
+}
+
+/* Dark Mode - Todo Cards */
+body.dark-mode .todo-card {
+  background-color: #242731;
+}
+
+body.dark-mode .todo-card.priority-high {
+  background: linear-gradient(to right, rgba(220, 53, 69, 0.1) 0%, #242731 10%);
+}
+
+body.dark-mode .todo-card.priority-medium {
+  background: linear-gradient(to right, rgba(255, 193, 7, 0.1) 0%, #242731 10%);
+}
+
+body.dark-mode .todo-card.priority-low {
+  background: linear-gradient(to right, rgba(40, 167, 69, 0.1) 0%, #242731 10%);
+}
+
+/* Dark Mode - Forms */
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #2f3441;
+  border-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #2f3441;
+  border-color: #667eea;
+  color: #e4e6eb;
+  box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #6c757d;
+}
+
+body.dark-mode .form-control:disabled,
+body.dark-mode .form-select:disabled {
+  background-color: #1f2229;
+  color: #6c757d;
+}
+
+body.dark-mode .form-label {
+  color: #b0b3b8;
+}
+
+body.dark-mode .form-text {
+  color: #6c757d;
+}
+
+body.dark-mode .form-check-input {
+  background-color: #2f3441;
+  border-color: #3a3f4b;
+}
+
+body.dark-mode .form-check-input:checked {
+  background-color: #667eea;
+  border-color: #667eea;
+}
+
+body.dark-mode .form-check-label {
+  color: #e4e6eb;
+}
+
+/* Dark Mode - Buttons */
+body.dark-mode .btn-primary {
+  background-color: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #5a67d8;
+  border-color: #5a67d8;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #3a3f4b;
+  border-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background-color: #4a4f5b;
+  border-color: #4a4f5b;
+}
+
+body.dark-mode .btn-outline-primary {
+  color: #667eea;
+  border-color: #667eea;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+  background-color: #667eea;
+  color: white;
+}
+
+body.dark-mode .btn-outline-secondary {
+  color: #b0b3b8;
+  border-color: #3a3f4b;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .btn-outline-light {
+  color: #e4e6eb;
+  border-color: #e4e6eb;
+}
+
+body.dark-mode .btn-outline-light:hover {
+  background-color: #e4e6eb;
+  color: #1a1d29;
+}
+
+/* Dark Mode - Navbar */
+body.dark-mode .navbar {
+  background-color: #242731 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .navbar-brand {
+  color: #e4e6eb !important;
+}
+
+body.dark-mode .nav-link {
+  color: rgba(228, 230, 235, 0.8) !important;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #e4e6eb !important;
+}
+
+body.dark-mode .navbar-toggler {
+  border-color: rgba(228, 230, 235, 0.3);
+}
+
+body.dark-mode .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #242731;
+  border-color: #3a3f4b;
+}
+
+body.dark-mode .dropdown-item {
+  color: #e4e6eb;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: #2f3441;
+  color: #e4e6eb;
+}
+
+body.dark-mode .dropdown-divider {
+  border-top-color: #3a3f4b;
+}
+
+/* Dark Mode - Alerts */
+body.dark-mode .alert {
+  background-color: #2f3441;
+  border-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .alert-success {
+  background-color: #1e3a2e;
+  border-color: #2d5a45;
+  color: #d4edda;
+}
+
+body.dark-mode .alert-danger {
+  background-color: #3d2020;
+  border-color: #5c2e2e;
+  color: #f8d7da;
+}
+
+body.dark-mode .alert-warning {
+  background-color: #3d3520;
+  border-color: #5c512e;
+  color: #fff3cd;
+}
+
+body.dark-mode .alert-info {
+  background-color: #1e2f3d;
+  border-color: #2d475c;
+  color: #d1ecf1;
+}
+
+/* Dark Mode - Badges */
+body.dark-mode .badge {
+  background-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .badge.bg-primary {
+  background-color: #667eea !important;
+}
+
+body.dark-mode .badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+body.dark-mode .badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+body.dark-mode .badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+body.dark-mode .badge.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+body.dark-mode .badge.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* Dark Mode - Modals */
+body.dark-mode .modal-content {
+  background-color: #242731;
+  border-color: #3a3f4b;
+}
+
+body.dark-mode .modal-header {
+  background-color: #2f3441;
+  border-bottom-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .modal-body {
+  color: #e4e6eb;
+}
+
+body.dark-mode .modal-footer {
+  background-color: #2f3441;
+  border-top-color: #3a3f4b;
+}
+
+body.dark-mode .modal-title {
+  color: #e4e6eb;
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+
+/* Dark Mode - Tables */
+body.dark-mode .table {
+  color: #e4e6eb;
+  border-color: #3a3f4b;
+}
+
+body.dark-mode .table thead th {
+  background-color: #2f3441;
+  border-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .table tbody tr {
+  border-color: #3a3f4b;
+}
+
+body.dark-mode .table tbody tr:hover {
+  background-color: #2f3441;
+}
+
+body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Dark Mode - Calendar */
+body.dark-mode .react-calendar {
+  background-color: #242731;
+  color: #e4e6eb;
+  border-color: #3a3f4b;
+}
+
+body.dark-mode .react-calendar__navigation button {
+  color: #e4e6eb;
+}
+
+body.dark-mode .react-calendar__navigation button:enabled:hover,
+body.dark-mode .react-calendar__navigation button:enabled:focus {
+  background-color: #2f3441;
+}
+
+body.dark-mode .react-calendar__month-view__weekdays {
+  color: #b0b3b8;
+}
+
+body.dark-mode .react-calendar__tile {
+  color: #e4e6eb;
+}
+
+body.dark-mode .react-calendar__tile:enabled:hover,
+body.dark-mode .react-calendar__tile:enabled:focus {
+  background-color: #2f3441;
+}
+
+body.dark-mode .react-calendar__tile--now {
+  background: rgba(102, 126, 234, 0.2);
+  color: #e4e6eb;
+}
+
+body.dark-mode .react-calendar__tile--active {
+  background: #667eea !important;
+  color: white;
+}
+
+body.dark-mode .react-calendar__tile--active:enabled:hover,
+body.dark-mode .react-calendar__tile--active:enabled:focus {
+  background: #5a67d8 !important;
+}
+
+/* Dark Mode - Dashboard Calendar */
+body.dark-mode .dashboard-calendar .react-calendar__navigation button:enabled:hover,
+body.dark-mode .dashboard-calendar .react-calendar__navigation button:enabled:focus {
+  background-color: #2f3441;
+}
+
+body.dark-mode .dashboard-calendar .react-calendar__tile:enabled:hover,
+body.dark-mode .dashboard-calendar .react-calendar__tile:enabled:focus {
+  background-color: #2f3441;
+}
+
+body.dark-mode .dashboard-calendar .react-calendar__tile--now {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+body.dark-mode .dashboard-calendar .react-calendar__tile--now:enabled:hover,
+body.dark-mode .dashboard-calendar .react-calendar__tile--now:enabled:focus {
+  background: rgba(102, 126, 234, 0.3);
+}
+
+/* Dark Mode - Loading Overlay */
+body.dark-mode .loading-overlay {
+  background: rgba(26, 29, 41, 0.9);
+}
+
+body.dark-mode .loading-spinner {
+  border-color: #3a3f4b;
+  border-top-color: #667eea;
+}
+
+/* Dark Mode - Scrollbar */
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #1a1d29;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: #3a3f4b;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background-color: #4a4f5b;
+}
+
+/* Dark Mode - Container */
+body.dark-mode .container {
+  color: #e4e6eb;
+}
+
+/* Dark Mode - List Group */
+body.dark-mode .list-group-item {
+  background-color: #242731;
+  border-color: #3a3f4b;
+  color: #e4e6eb;
+}
+
+body.dark-mode .list-group-item:hover {
+  background-color: #2f3441;
+}
+
+/* Dark Mode - Progress Bar */
+body.dark-mode .progress {
+  background-color: #2f3441;
+}
+
+/* Dark Mode - Toast Notifications */
+body.dark-mode .Toastify__toast {
+  background-color: #242731;
+  color: #e4e6eb;
+}
+
+body.dark-mode .Toastify__toast--success {
+  background-color: #1e3a2e;
+}
+
+body.dark-mode .Toastify__toast--error {
+  background-color: #3d2020;
+}
+
+body.dark-mode .Toastify__toast--warning {
+  background-color: #3d3520;
+}
+
+body.dark-mode .Toastify__toast--info {
+  background-color: #1e2f3d;
+}
+
+/* Dark Mode - Team Avatar */
+body.dark-mode .team-avatar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Mode - Gradient Card */
+body.dark-mode .gradient-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .gradient-card:hover {
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Light Mode Specific Overrides */
+body.light-mode {
+  background-color: #f5f7fa;
+  color: #212529;
+}
+
+body.light-mode .App {
+  background-color: #f5f7fa;
+}
+
+/* Ensure smooth theme transitions */
+body,
+.App,
+.card,
+.navbar,
+.modal-content,
+.form-control,
+.btn {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

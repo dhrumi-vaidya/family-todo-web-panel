@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { FamilyProvider } from './context/FamilyContext';
+import { ThemeProvider } from './context/ThemeContext';
 import NavigationBar from './components/Navbar';
 import PrivateRoute from './components/PrivateRoute';
 import Login from './pages/Login';
@@ -24,113 +25,115 @@ import './App.css';
 
 function App() {
   return (
-    <AuthProvider>
-      <FamilyProvider>
-        <Router>
-          <div className="App">
-            <NavigationBar />
-            <Routes>
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/accept-invitation/:token" element={<AcceptInvitation />} />
-              <Route
-                path="/family-setup"
-                element={
-                  <PrivateRoute>
-                    <FamilySetup />
-                  </PrivateRoute>
-                }
+    <ThemeProvider>
+      <AuthProvider>
+        <FamilyProvider>
+          <Router>
+            <div className="App">
+              <NavigationBar />
+              <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/accept-invitation/:token" element={<AcceptInvitation />} />
+                <Route
+                  path="/family-setup"
+                  element={
+                    <PrivateRoute>
+                      <FamilySetup />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/dashboard"
+                  element={
+                    <PrivateRoute>
+                      <Dashboard />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/my-todos"
+                  element={
+                    <PrivateRoute>
+                      <MyTodos />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/family-todos"
+                  element={
+                    <PrivateRoute>
+                      <FamilyTodos />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/family-calendar"
+                  element={
+                    <PrivateRoute>
+                      <FamilyCalendar />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/personal-calendar"
+                  element={
+                    <PrivateRoute>
+                      <PersonalCalendar />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/bills"
+                  element={
+                    <PrivateRoute>
+                      <Bills />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/budget"
+                  element={
+                    <PrivateRoute>
+                      <Budget />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/profile"
+                  element={
+                    <PrivateRoute>
+                      <Profile />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/family-tree"
+                  element={
+                    <PrivateRoute>
+                      <FamilyTree />
+                    </PrivateRoute>
+                  }
+                />
+                <Route path="/" element={<Navigate to="/dashboard" />} />
+              </Routes>
+              <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={true}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
               />
-              <Route
-                path="/dashboard"
-                element={
-                  <PrivateRoute>
-                    <Dashboard />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/my-todos"
-                element={
-                  <PrivateRoute>
-                    <MyTodos />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/family-todos"
-                element={
-                  <PrivateRoute>
-                    <FamilyTodos />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/family-calendar"
-                element={
-                  <PrivateRoute>
-                    <FamilyCalendar />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/personal-calendar"
-                element={
-                  <PrivateRoute>
-                    <PersonalCalendar />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/bills"
-                element={
-                  <PrivateRoute>
-                    <Bills />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/budget"
-                element={
-                  <PrivateRoute>
-                    <Budget />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/profile"
-                element={
-                  <PrivateRoute>
-                    <Profile />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/family-tree"
-                element={
-                  <PrivateRoute>
-                    <FamilyTree />
-                  </PrivateRoute>
-                }
-              />
-              <Route path="/" element={<Navigate to="/dashboard" />} />
-            </Routes>
-            <ToastContainer
-              position="top-right"
-              autoClose={3000}
-              hideProgressBar={false}
-              newestOnTop={true}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="colored"
-            />
-          </div>
-        </Router>
-      </FamilyProvider>
-    </AuthProvider>
+            </div>
+          </Router>
+        </FamilyProvider>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 

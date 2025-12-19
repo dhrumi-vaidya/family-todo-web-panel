@@ -1,0 +1,272 @@
+/* Profile Page Styles */
+.profile-page {
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+.profile-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.profile-header p {
+    font-size: 0.95rem;
+}
+
+/* Profile Main Card */
+.profile-main-card {
+    border-radius: 20px;
+    border: none;
+    padding: 2rem 1rem;
+}
+
+.profile-avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.profile-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    border: 6px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.profile-badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Social Media Section */
+.social-media-section {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-media-section .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.social-icon.youtube {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+}
+
+.social-icon.instagram {
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.tiktok {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+}
+
+/* Profile Details Card */
+.profile-details-card {
+    border-radius: 20px;
+    border: none;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.availability-badge {
+    font-size: 0.85rem;
+    color: #28a745;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.profile-detail-item {
+    margin-bottom: 1rem;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.tag-item {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.35rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1d29;
+    color: #e4e6eb;
+}
+
+body.dark-mode .profile-page {
+    background-color: #1a1d29;
+}
+
+body.dark-mode .profile-header p {
+    color: #b0b3b8;
+}
+
+body.dark-mode .profile-main-card,
+body.dark-mode .profile-details-card {
+    background-color: #242731;
+    color: #e4e6eb;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .social-media-section {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .detail-label {
+    color: #b0b3b8;
+}
+
+body.dark-mode .detail-value {
+    color: #e4e6eb;
+}
+
+body.dark-mode .tag-item {
+    background-color: #3a3f4b;
+    color: #e4e6eb;
+}
+
+body.dark-mode .form-control {
+    background-color: #2f3441;
+    border-color: #3a3f4b;
+    color: #e4e6eb;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #2f3441;
+    border-color: #667eea;
+    color: #e4e6eb;
+    box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
+}
+
+body.dark-mode .form-control:disabled {
+    background-color: #1f2229;
+    color: #6c757d;
+}
+
+body.dark-mode .alert-danger {
+    background-color: #3d2020;
+    border-color: #5c2e2e;
+    color: #f8d7da;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f5f7fa;
+    color: #212529;
+}
+
+body.light-mode .profile-page {
+    background-color: #f5f7fa;
+}
+
+body.light-mode .profile-main-card,
+body.light-mode .profile-details-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .profile-avatar {
+        width: 150px;
+        height: 150px;
+        font-size: 3rem;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 2.5rem;
+    }
+
+    .profile-name {
+        font-size: 1.25rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .availability-badge {
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+    }
+}
